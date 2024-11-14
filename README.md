@@ -31,29 +31,32 @@ This project is a Laravel-based application with real-time notification function
 
 2. **Install Dependencies**
 
+    ```bash
     composer install
     npm install && npm run dev
 
 3. **Set Up Environment**
 
-    cp .env.example .env
+     > **cp .env.example .env**
 
 4. **Generate Application Key**
 
+    ```bash
     php artisan key:generate
 
 5. **Set Up Database**
 
-    Create a database and configure the database connection in your .env file:
+    > **Create a database and configure the database connection in your .env file:**
 
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=your_database
-    DB_USERNAME=your_username
-    DB_PASSWORD=your_password
+    - **DB_CONNECTION=mysql**
+    - **DB_HOST=127.0.0.1**
+    - **DB_PORT=3306**
+    - **DB_DATABASE=your_database**
+    - **DB_USERNAME=your_username**
+    - **DB_PASSWORD=your_password**
 
 
 6. **Run Migrations**
 
+    ```bash
     php artisan migrate
