@@ -52,10 +52,7 @@ class PostController extends Controller
 
         try{
 
-            $post = $this->postRepository->createPost($input);
-
-            event(new PostCreated($post));
-
+            $this->postRepository->createPost($input);
             return redirect()->route('post.index');
 
         } catch(\Exception $e){

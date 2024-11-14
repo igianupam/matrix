@@ -1,29 +1,35 @@
-<!-- Create Post Section -->
-<div style="margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-    <h3>Create New Post</h3>
-    <form action="{{ route('post.store') }}" method="POST">
-        @csrf <!-- CSRF token for security -->
-        
-        <div style="margin-bottom: 10px;">
-            <label for="title">Title:</label><br>
-            <input type="text" id="title" name="title" required style="width: 100%; padding: 8px;">
-        </div>
-        
-        <div style="margin-bottom: 10px;">
-            <label for="content">Content:</label><br>
-            <textarea id="description" name="description" rows="4" required style="width: 100%; padding: 8px;"></textarea>
-        </div>
-        
-        <div style="margin-bottom: 10px;">
-            <label for="is_active">Status:</label><br>
-            <select id="is_active" name="is_active" style="width: 100%; padding: 8px;">
-                <option value="1">Active</option>
-                <option value="0">Inactive</option>
-            </select>
-        </div>
+@extends('layouts')
 
-        <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-            Create Post
-        </button>
-    </form>
-</div>
+@section('content')
+    <div class="card">
+        <div class="card-body">
+
+            <h3>Create New Post</h3>
+
+            <form action="{{ route('post.store') }}" method="POST">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title:</label><br>
+                    <input type="text" class="form-control" id="title" name="title">
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Content:</label><br>
+                    <textarea id="description" class="form-control" name="description" rows="4"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Content:</label><br>
+                    <textarea id="description" class="form-control" name="description" rows="4"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="is_active" class="form-label">Status:</label><br>
+                    <select class="form-control" id="is_active" name="is_active">
+                        <option value="1">Active</option>
+                        <option value="0">Inactive</option>
+                    </select>
+                </div>
+                <a href="{{ route('post.index') }}" class="btn btn-primary mx-2">Back</a> 
+                <button type="submit" class="btn btn-success">Create Post</button>
+            </form>
+
+        </div>
+    </div>
+@endsection
