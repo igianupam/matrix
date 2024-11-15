@@ -48,12 +48,12 @@ This project is a Laravel-based application with real-time notification function
 
     Create a database and configure the database connection in your .env file:
 
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=your_database
-    DB_USERNAME=your_username
-    DB_PASSWORD=your_password
+    - **DB_CONNECTION=mysql**
+    - **DB_HOST=127.0.0.1**
+    - **DB_PORT=3306**
+    - **DB_DATABASE=your_database**
+    - **DB_USERNAME=your_username**
+    - **DB_PASSWORD=your_password**
 
 
 6. **Run Migrations**
@@ -63,29 +63,29 @@ This project is a Laravel-based application with real-time notification function
 
 7. **Setup SMTP Credentials**
 
-    MAIL_MAILER=
-    MAIL_HOST=
-    MAIL_PORT=
-    MAIL_USERNAME=
-    MAIL_PASSWORD=
-    MAIL_ENCRYPTION=
-    MAIL_FROM_ADDRESS=
-    MAIL_FROM_NAME=
+    - **AIL_MAILER=**
+    - **MAIL_HOST=your_mail_host**
+    - **MAIL_PORT=mail_port**
+    - **MAIL_USERNAME=username**
+    - **MAIL_PASSWORD=password**
+    - **MAIL_ENCRYPTION=ssl/tls**
+    - **MAIL_FROM_ADDRESS=from_address**
+    - **MAIL_FROM_NAME=name**
 
 8. **Setup Pusher Credentials**
 
-    PUSHER_APP_ID=
-    PUSHER_APP_KEY=
-    PUSHER_APP_SECRET=
-    PUSHER_HOST=
-    PUSHER_PORT=443
-    PUSHER_SCHEME=
-    PUSHER_APP_CLUSTER=
+    - **PUSHER_APP_ID=**
+    - **PUSHER_APP_KEY=**
+    - **PUSHER_APP_SECRET=**
+    - **PUSHER_HOST=**
+    - **PUSHER_PORT=443**
+    - **PUSHER_SCHEME=
+    - **PUSHER_APP_CLUSTER=**
 
 9. **Change The Drivers**
 
-    QUEUE_CONNECTION=database
-    BROADCAST_DRIVER=pusher
+    - **QUEUE_CONNECTION=database**
+    - **BROADCAST_DRIVER=pusher**
 
 10. **Run Queue For Background Working**
 
